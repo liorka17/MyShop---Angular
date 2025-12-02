@@ -1,43 +1,57 @@
 .heroes {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
+  margin: 0 0 2em 0;              /* מרווח תחתון מהרשימה */
+  list-style-type: none;          /* בלי עיגולים/מספור */
+  padding: 0;                     /* בלי ריווח פנימי */
+  width: 15em;                    /* רוחב קבוע לרשימה */
+  color: #e5e7eb;                 /* טקסט בהיר למצב דארק */
 }
+
 .heroes li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
+  cursor: pointer;                /* סמן של יד */
+  position: relative;             /* מאפשר הזזה קלה */
+  left: 0;                        /* התחלה ללא הזזה */
+  background-color: #1f2933;      /* רקע כהה לפריט */
+  color: #e5e7eb;                 /* טקסט בהיר */
+  margin: .5em;                   /* רווח בין פריטים */
+  padding: .3em 0;                /* ריווח פנימי אנכי */
+  height: 1.8em;                  /* גובה מעט גדול יותר */
+  border-radius: 6px;             /* פינות מעוגלות */
+  transition:                     /* אנימציה חלקה במעבר */
+    background-color 0.2s ease,
+    color 0.2s ease,
+    left 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35); /* צל עדין */
 }
+
 .heroes li:hover {
-  color: #0e0af6;
-  background-color: #DDD;
-  left: .1em;
+  color: #60a5fa;                 /* טקסט כחול בהיר בהובר */
+  background-color: #111827;      /* רקע כהה יותר בהובר */
+  left: .1em;                     /* זז קצת ימינה */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* צל חזק יותר */
 }
+
 .heroes li.selected {
-  background-color: #CFD8DC;
-  color: white;
+  background-color: #2563eb;      /* כחול מודגש לפריט נבחר */
+  color: #f9fafb;                 /* טקסט כמעט לבן */
 }
+
 .heroes li.selected:hover {
-  background-color: #dd0303;
-  color: white;
+  background-color: #dc2626;      /* אדום בוהק בהובר על נבחר */
+  color: #f9fafb;                 /* טקסט בהיר */
 }
+
 .heroes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+  display: inline-block;          /* תצוגת בלוק בשורה */
+  font-size: small;               /* גודל טקסט קטן */
+  color: #e5e7eb;                 /* טקסט בהיר */
+  padding: 0.8em 0.7em 0 0.7em;   /* ריווח פנימי */
+  background-color: #374151;      /* רקע אפור כהה לתג */
+  line-height: 1em;               /* גובה שורה */
+  position: relative;             /* מאפשר מיקום */
+  left: -1px;                     /* זז טיפה שמאלה */
+  top: -4px;                      /* זז טיפה למעלה */
+  height: 1.8em;                  /* גובה התג */
+  margin-right: .8em;             /* רווח מימין לטקסט */
+  border-radius: 6px 0 0 6px;     /* פינות מעוגלות בצד שמאל */
 }

@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
-import { MessagesComponent } from './messages/messages.component'; // ← הוספה נדרשת
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; // ← הוספה נדרשת
 
 
 
@@ -15,7 +16,8 @@ import { MessagesComponent } from './messages/messages.component'; // ← הוס
     AppComponent,
     HeroesComponent,
     HeroDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

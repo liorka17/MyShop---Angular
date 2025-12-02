@@ -1,0 +1,92 @@
+:host {
+  display: block;
+  margin: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* "messages works!" line */
+p {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+/* main panel: the div with *ngIf */
+:host > div {
+  background: radial-gradient(circle at top, rgba(59,130,246,0.18), rgba(15,23,42,0.98));
+  border: 1px solid rgba(148,163,184,0.35);
+  border-radius: 12px;
+  padding: 1rem 1.2rem 0.9rem;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  color: #e5e7eb;
+  max-width: 26rem;
+}
+
+/* "messages" heading */
+:host > div > h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* clear button */
+button.clear {
+  float: right;
+  margin-top: -2.1rem;
+  background: rgba(248,113,113,0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(248,113,113,0.6);
+  border-radius: 999px;
+  padding: 0.25rem 0.9rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+button.clear:hover {
+  background: #dc2626;
+  color: #fef2f2;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(220,38,38,0.5);
+}
+
+button.clear:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* each message line: the inner divs from *ngFor */
+:host > div > div {
+  background: rgba(15,23,42,0.85);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  border: 1px solid rgba(75,85,99,0.7);
+  position: relative;
+  overflow-wrap: break-word;
+  margin-bottom: 0.4rem;
+}
+
+/* glowing dot indicator on each message */
+:host > div > div::before {
+  content: "";
+  position: absolute;
+  left: -0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, #22c55e, #16a34a);
+  box-shadow: 0 0 8px rgba(34,197,94,0.9);
+}

@@ -1,0 +1,174 @@
+:host {
+  display: block;                                   /* הקומפוננטה הראשית תופסת מסך */
+  min-height: 100vh;                                /* גובה מסך מלא */
+  background: radial-gradient(circle at top,
+    rgba(37,99,235,0.25),
+    #020617);                                       /* רקע דארק מוד */
+  color: #e5e7eb;                                   /* טקסט בהיר */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* קונטיינר מרכזי לכל התוכן */
+:host ::ng-deep body {
+  margin: 0;                                        /* ביטול מרווח ברירת מחדל של body */
+}
+
+:host {
+  
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  box-sizing: border-box;
+}
+
+:host > * {
+  box-sizing: border-box;
+}
+
+/* עוטף ויזואלי פנימי לכל האפליקציה */
+:host > h1,
+:host > input,
+:host > button,
+:host > app-heroes,
+:host > app-messages {
+  max-width: 960px;
+  width: 100%;
+}
+
+/* כותרת ראשית */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #60a5fa, #a855f7, #f97316);
+  background-clip: text;
+  color: transparent;
+}
+
+/* שורת שליטה (input + button) */
+input,
+button {
+  display: inline-block;
+}
+
+/* שדה הכותרת */
+input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.7);
+  background: rgba(15,23,42,0.9);
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 16rem;
+  margin-right: 0.6rem;
+  box-shadow: 0 0 0 1px rgba(15,23,42,0.8);
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.45);
+  background: rgba(15,23,42,1);
+}
+
+/* כפתור push */
+button {
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(52,211,153,0.7);
+  background: radial-gradient(circle at top,
+    rgba(34,197,94,0.25),
+    rgba(6,78,59,1));
+  color: #dcfce7;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(34,197,94,0.5);
+  border-color: #22c55e;
+  background: radial-gradient(circle at top,
+    rgba(34,197,94,0.35),
+    rgba(6,78,59,1));
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ריווח בין השליטה לרשימות */
+app-heroes {
+  display: block;
+  margin-top: 1.8rem;
+}
+
+app-messages {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* top navigation under the title and controls */
+nav {
+  margin: 1.5rem auto 1.5rem auto;      /* space above and below nav */
+  display: flex;                        /* center the links */
+  justify-content: center;
+}
+
+/* nav links */
+nav a {
+  position: relative;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.9);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* hover effect */
+nav a:hover {
+  color: #bfdbfe;
+  background: rgba(30, 64, 175, 0.95);
+  border-color: #60a5fa;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.55);
+  transform: translateY(-1px);
+}
+
+/* when you add routerLinkActive="active" */
+nav a.active {
+  color: #fefce8;
+  background: linear-gradient(to right, #4f46e5, #ec4899);
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(129, 140, 248, 0.7);
+}
+
+
